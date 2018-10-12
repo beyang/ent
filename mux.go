@@ -119,6 +119,9 @@ func (r *Router) Match(req *http.Request, match *RouteMatch) bool {
 // When there is a match, the route variables can be retrieved calling
 // mux.Vars(request).
 func (r *Router) ServeHTTP(w http.ResponseWriter, req *http.Request) {
+
+	// enterprise change
+
 	if !r.skipClean {
 		path := req.URL.Path
 		if r.useEncodedPath {
