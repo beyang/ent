@@ -46,6 +46,10 @@ type Route struct {
 // SkipClean reports whether path cleaning is enabled for this route via
 // Router.SkipClean.
 func (r *Route) SkipClean() bool {
+
+	// BLAH
+	// BLAH2
+
 	return r.skipClean
 }
 
