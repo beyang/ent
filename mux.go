@@ -47,6 +47,8 @@ type Router struct {
 	// Configurable Handler to be used when no route matches.
 	NotFoundHandler http.Handler
 
+	// OSS change 1
+
 	// Configurable Handler to be used when the request method does not match the route.
 	MethodNotAllowedHandler http.Handler
 
@@ -93,6 +95,8 @@ func (r *Router) Match(req *http.Request, match *RouteMatch) bool {
 			return true
 		}
 	}
+
+	// OSS change 2
 
 	if match.MatchErr == ErrMethodMismatch {
 		if r.MethodNotAllowedHandler != nil {
